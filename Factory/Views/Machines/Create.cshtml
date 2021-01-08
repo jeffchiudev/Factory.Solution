@@ -4,18 +4,18 @@
 
 @model Factory.Models.Machine
 
-<h2>Add a new machine:</h2>
-
+<h2>Add a New Machine:</h2>
+<hr/>
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.MachineName)
-    @Html.TextBoxFor(model => model.MachineName)
+    <h4>Machine Name: @Html.TextBoxFor(model => model.MachineName)</h4>
     
 
-    @Html.Label("Select an Engineer to associate with the machine")
+    @Html.Label("Assign an engineer:")
     @Html.DropDownList("EngineerId")
 
-    <input type="submit" value="Add new Machine" class="btn btn-default" />
+    <input type="submit" value="Add new Machine" class="btn btn-primary" />
 }
+<hr/>
 <p>@Html.ActionLink("Show all machines", "Index")</p>
 <p>@Html.ActionLink("Back Home", "Index", "Home")</p>

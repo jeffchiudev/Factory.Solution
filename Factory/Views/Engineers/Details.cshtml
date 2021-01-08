@@ -6,8 +6,8 @@
 
 <h2>Engineer Details</h2>
 <hr />
-<h3>Engineer Name: @Html.DisplayFor(model => model.EngineerName)</h3>
-<h3>Badge ID: @Html.DisplayFor(model => model.EngineerId)</h3>
+<h4>Engineer Name: @Html.DisplayFor(model => model.EngineerName)</h4>
+<h4>Badge ID: @Html.DisplayFor(model => model.EngineerId)</h4>
 
 @if(@Model.Machines.Count == 0)
 {
@@ -15,13 +15,14 @@
 }
 else
 {
-    <h4>@Html.DisplayFor(model => model.EngineerName) is assigned to these machines:</h4>
+    <hr/>
+    <h4>Machine Assignment:</h4>
     @foreach(var join in Model.Machines)
     {
-        <h5>@join.Machine.MachineName</h5>
+        <h6>@join.Machine.MachineName</h6>
     }
 }
-
+<hr/>
 <p>@Html.ActionLink("Back to Engineer Roster", "Index")</p>
 <p>@Html.ActionLink("Edit Engineer Details", "Edit", new { id = Model.EngineerId })</p>
 <p>@Html.ActionLink("Remove Engineer from roster", "Delete", new { id = Model.EngineerId })</p>

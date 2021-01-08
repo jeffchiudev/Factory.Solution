@@ -15,11 +15,9 @@ Created 8th Jan, 2021
 ## Description:
 A MySQL database management application for managing workflow for the assignment and repair of factory floor machines by engineers.  
 
-## Preview:
-
 ### User Stories:
 | ID | User Story | Accepted |
-| :-------- | :------ | :------- |
+| :--------: | :------ | :-------: |
 | US001 | As the factory manager, I need to be able to see a list of all engineers, and I need to be able to see a list of all machines. | True |
 | US002 | As the factory manager, I need to be able to select a engineer, see their details, and see a list of all machines that engineer is licensed to repair. I also need to be able to select a machine, see its details, and see a list of all engineers licensed to repair it. | True |
 | US003 | As the factory manager, I need to add new engineers to our system when they are hired. I also need to add new machines to our system when they are installed. | True |
@@ -27,7 +25,7 @@ A MySQL database management application for managing workflow for the assignment
 | US005 | As the factory manager, I need to be able to add or remove machines that a specific engineer is licensed to repair. I also need to be able to modify this relationship from the other side, and add or remove engineers from a specific machine. | True |
 | US006 | I should be able to navigate to a splash page that lists all engineers and machines. Users should be able to click on an individual engineer or machine to see all the engineers/machines that belong to it. | True |
 
-#### Software Requirements
+### Software Requirements
 
 1. Internet browser of choice, [Chrome](https://www.google.com/chrome/?brand=CHBD&brand=FHFK&gclid=CjwKCAiA_9r_BRBZEiwAHZ_v19Z0_XYzZ8NiG2AyZJ9A8ZVQjOBCYIuyRcS3Muc41TZCA_PL0n3s6hoCiaEQAvD_BwE&gclsrc=aw.ds) recommended.
 2. A code editor such as [VSCode](https://code.visualstudio.com/) or [Atom](https://atom.io/).
@@ -35,14 +33,14 @@ A MySQL database management application for managing workflow for the assignment
 4. Install MySQL: [MacOS](https://dev.mysql.com/downloads/file/?id=484914) & [PC](https://dev.mysql.com/downloads/file/?id=484919).
 5. Install MySQL Workbench: Find appropriate version [here](https://dev.mysql.com/downloads/workbench/).
 
-#### Open Locally
+### Open Locally
 
 1. Click on the link to my repository on github [here](https://github.com/jeffchiudev/Factory.Solution). 
 2. Click on the green "Code" link near the top and above the README.md.
 3. Alternatively open your terminal and use the command `git clone https://github.com/jeffchiudev/Factory.Solution` into the directory you would like to clone the repository.
 4. Open in text editor to view code.
 
-#### Installing .NET
+### Installing .NET
 
 1. Download [.NET Core SDK (Software Development Kit)](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-2.2.106-macos-x64-installer). Clicking this link will prompt a file download for your particular OS from Microsoft.
 2. Open the file. Follow the installation steps.
@@ -71,11 +69,36 @@ A MySQL database management application for managing workflow for the assignment
 5. Select all schema objects you wnat to import and the option `Dump Structure and Data` is selected.
 6. Click `Start Import`.
 7. Optionally, using your SQL management program, paste the following schema statement to reproduce the database:
+
+<details><summary>Click to see SQL schema statement</summary>
+
 ```
-INSERT DATABASE SCHEMA HERE
+CREATE DATABASE `jeff_chiu_many_to_many` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE TABLE `engineermachine` (
+  `EngineerMachineId` int NOT NULL AUTO_INCREMENT,
+  `MachineId` int NOT NULL,
+  `EngineerId` int NOT NULL,
+  PRIMARY KEY (`EngineerMachineId`),
+  KEY `IX_EngineerMachine_EngineerId` (`EngineerId`),
+  KEY `IX_EngineerMachine_MachineId` (`MachineId`),
+  CONSTRAINT `FK_EngineerMachine_Engineers_EngineerId` FOREIGN KEY (`EngineerId`) REFERENCES `engineers` (`EngineerId`) ON DELETE CASCADE,
+  CONSTRAINT `FK_EngineerMachine_Machines_MachineId` FOREIGN KEY (`MachineId`) REFERENCES `machines` (`MachineId`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `engineers` (
+  `EngineerId` int NOT NULL AUTO_INCREMENT,
+  `EngineerName` longtext,
+  PRIMARY KEY (`EngineerId`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `machines` (
+  `MachineId` int NOT NULL AUTO_INCREMENT,
+  `MachineName` longtext,
+  PRIMARY KEY (`MachineId`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
 
-#### View In Browser
+</details>
+
+### View In Browser
 
 1. To view in browser, navigate to `PROJECTNAME.Solutions/PROJECTNAME` in the command line.
 2. Use command `dotnet build` and `dotnet run` to start a local version of the page. 

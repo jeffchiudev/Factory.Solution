@@ -6,11 +6,11 @@
 
 <h2>Are you sure you want to remove this Engineer from the roster?</h2>
 <hr/>
-Engineer Name: @Html.DisplayFor(model => model.EngineerName)
+<h5>Engineer Name: @Html.DisplayFor(model => model.EngineerName)</h5>
 @using (Html.BeginForm())
 {
     <input type="submit" value="Delete" class="btn btn-danger" />
 }
 <hr/>
-@Html.ActionLink("Back to Engineer Roster", "Index")
+<p>@Html.ActionLink("Back to Engineer Roster", "Index")</p>
 <p>@Html.ActionLink("Back Home", "Index", "Home")</p>

@@ -5,11 +5,12 @@
 @model Factory.Models.Machine
 
 <h2>Are you sure you want to remove this Machine?</h2>
-
+<hr/>
 <h3>Machine Name: @Html.DisplayFor(model => model.MachineName)</h3>
 @using (Html.BeginForm())
 {
     <input type="submit" value="Delete" class="btn btn-danger" />
 }
+<hr/>
 <p>@Html.ActionLink("Back to List", "Index")</p>
 <p>@Html.ActionLink("Back Home", "Index", "Home")</p>
