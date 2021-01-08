@@ -2,14 +2,14 @@
 
 # Factory Manager
 
-</div>
-
-<div align="center">
 <img src="https://github.com/jeffchiudev.png" width="200px" height="auto" style="border-radius: 15px 50px;">
 
+______________________
+
+Management software to direct the flow of work for engineers and machines they're licensed to repair
+
+Created 8th Jan, 2021
 </div>
-<h3 align="center">Management software to direct the flow of work for engineers and machines they're licensed to repair </h3>
-<h4 align="center">Created 8th Jan, 2021</h4>
 
 
 ## Description:
@@ -17,7 +17,7 @@ A MySQL database management application for managing workflow for the assignment
 
 ## Preview:
 
-#### User Stories:
+### User Stories:
 | ID | User Story | Accepted |
 | :-------- | :------ | :------- |
 | US001 | As the factory manager, I need to be able to see a list of all engineers, and I need to be able to see a list of all machines. | True |
@@ -27,7 +27,7 @@ A MySQL database management application for managing workflow for the assignment
 | US005 | As the factory manager, I need to be able to add or remove machines that a specific engineer is licensed to repair. I also need to be able to modify this relationship from the other side, and add or remove engineers from a specific machine. | True |
 | US006 | I should be able to navigate to a splash page that lists all engineers and machines. Users should be able to click on an individual engineer or machine to see all the engineers/machines that belong to it. | True |
 
-##### Software Requirements
+#### Software Requirements
 
 1. Internet browser of choice, [Chrome](https://www.google.com/chrome/?brand=CHBD&brand=FHFK&gclid=CjwKCAiA_9r_BRBZEiwAHZ_v19Z0_XYzZ8NiG2AyZJ9A8ZVQjOBCYIuyRcS3Muc41TZCA_PL0n3s6hoCiaEQAvD_BwE&gclsrc=aw.ds) recommended.
 2. A code editor such as [VSCode](https://code.visualstudio.com/) or [Atom](https://atom.io/).
@@ -35,20 +35,20 @@ A MySQL database management application for managing workflow for the assignment
 4. Install MySQL: [MacOS](https://dev.mysql.com/downloads/file/?id=484914) & [PC](https://dev.mysql.com/downloads/file/?id=484919).
 5. Install MySQL Workbench: Find appropriate version [here](https://dev.mysql.com/downloads/workbench/).
 
-##### Open Locally
+#### Open Locally
 
 1. Click on the link to my repository on github [here](https://github.com/jeffchiudev/Factory.Solution). 
 2. Click on the green "Code" link near the top and above the README.md.
 3. Alternatively open your terminal and use the command `git clone https://github.com/jeffchiudev/Factory.Solution` into the directory you would like to clone the repository.
 4. Open in text editor to view code.
 
-##### Installing .NET
+#### Installing .NET
 
 1. Download [.NET Core SDK (Software Development Kit)](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-2.2.106-macos-x64-installer). Clicking this link will prompt a file download for your particular OS from Microsoft.
 2. Open the file. Follow the installation steps.
 3. Confirm the installation is successful by opening your terminal and running the command `dotnet --version`. The response should be something similar to this:`2.2.105`. This means it was successfully installed.
 
-#### Import Database & Entity Framework Core
+### Import Database & Entity Framework Core
 1. Navigate to the PROJECTNAME.Solution/PROJECTNAME directory in terminal.
 2. Run command `dotnet ef database update` to generate database.
 3. Run command `dotnet ef migrations add [MIGRATIONNAME]` and `dotnet ef database update` if you're making changes to the database. 
@@ -63,7 +63,7 @@ A MySQL database management application for managing workflow for the assignment
 ```
 5. Change server, port and UID as necessary.  
 
-#### Import Database with MySQL Workbench
+### Import Database with MySQL Workbench
 1. Open MySQL and enter password.
 2. Go to nav bar and click on `Server` and then `Data Import`.
 3. Use the option `Import from Self-Contained File`.
@@ -75,7 +75,7 @@ A MySQL database management application for managing workflow for the assignment
 INSERT DATABASE SCHEMA HERE
 ```
 
-##### View In Browser
+#### View In Browser
 
 1. To view in browser, navigate to `PROJECTNAME.Solutions/PROJECTNAME` in the command line.
 2. Use command `dotnet build` and `dotnet run` to start a local version of the page. 
@@ -85,7 +85,7 @@ INSERT DATABASE SCHEMA HERE
 
 ## Support and Contact Details
 
-If any errors or bugs occur please email me [here](jeffchiudev@gmail.com).
+For errors or bugs occur please email me [here](jeffchiudev@gmail.com).
 
 ## Technologies Used
 
