@@ -5,11 +5,12 @@
 @model Factory.Models.Engineer
 
 <h4>Add a new person to the Engineer roster:</h4>
+<hr/>
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.EngineerName)
-    @Html.TextBoxFor(model => model.EngineerName)
+    <h5>Engineer Name: @Html.TextBoxFor(model => model.EngineerName)</h5>
     <input type="submit" value="Add Engineer" class="btn btn-success" />
 }
+<hr/>
 <p>@Html.ActionLink("Show Engineer Roster", "Index")</p>
 <p>@Html.ActionLink("Back Home", "Index", "Home")</p>
