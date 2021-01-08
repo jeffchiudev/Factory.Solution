@@ -1,0 +1,22 @@
+@{
+    Layout = "_Layout";
+}
+
+@model ProjectName.Models.Child
+
+<h2>Add an Engineer</h2>
+
+<h4>Assign an Engineer to this Machine: @Html.DisplayFor(model => model.MachineName)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.MachineId)
+
+    @Html.Label("Select Engineer")
+    @Html.DropDownList("EngineerId")
+
+    <input type="submit" value="Save" class="btn btn-primary" />
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Back Home", "Index", "Home")</p>

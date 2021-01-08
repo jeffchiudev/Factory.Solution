@@ -1,19 +1,20 @@
-@* @{
+@{
   Layout = "_Layout";
 }
 
-@model ProjectName.Models.Child
+@model Factory.Models.Machine
 
-<h4>Add a new task</h4>
+<h2>Add a new machine:</h2>
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Description)
-    @Html.TextBoxFor(model => model.Description)
+    @Html.LabelFor(model => model.MachineName)
+    @Html.TextBoxFor(model => model.MachineName)
+    
 
-    @Html.Label("Select Parent")
+    @Html.Label("Select an Engineer to associate with the machine")
     @Html.DropDownList("ParentId")
 
-    <input type="submit" value="Add new child" class="btn btn-default" />
+    <input type="submit" value="Add new Machine" class="btn btn-default" />
 }
-<p>@Html.ActionLink("Show all childs", "Index")</p> *@
+<p>@Html.ActionLink("Show all childs", "Index")</p>
