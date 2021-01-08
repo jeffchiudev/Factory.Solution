@@ -1,6 +1,6 @@
 <div align="center">
 
-# TODO PRoject Title
+# Factory Manager
 
 </div>
 
@@ -8,19 +8,24 @@
 <img src="https://github.com/jeffchiudev.png" width="200px" height="auto" style="border-radius: 15px 50px;">
 
 </div>
-<h3 align="center">Many-to-many relationship database, 08.Jan.2020</h3>
-<h4 align="center"> By Jeff Chiu</h4>
+<h3 align="center">Management software to direct the flow of work for engineers and machines they're licensed to repair </h3>
+<h4 align="center">Created 8th Jan, 2021</h4>
 
 
-## Description: 
+## Description:
+A MySQL database management application for managing workflow for the assignment and repair of factory floor machines by engineers.  
 
 ## Preview:
 
 #### User Stories:
 | ID | User Story | Accepted |
 | :-------- | :------ | :------- |
-||||
-||||
+| US001 | As the factory manager, I need to be able to see a list of all engineers, and I need to be able to see a list of all machines. | True |
+| US002 | As the factory manager, I need to be able to select a engineer, see their details, and see a list of all machines that engineer is licensed to repair. I also need to be able to select a machine, see its details, and see a list of all engineers licensed to repair it. | True |
+| US003 | As the factory manager, I need to add new engineers to our system when they are hired. I also need to add new machines to our system when they are installed. | True |
+| US004 | As the factory manager, I should be able to add new machines even if no engineers are employed. I should also be able to add new engineers even if no machines are installed. | True |
+| US005 | As the factory manager, I need to be able to add or remove machines that a specific engineer is licensed to repair. I also need to be able to modify this relationship from the other side, and add or remove engineers from a specific machine. | True |
+| US006 | I should be able to navigate to a splash page that lists all engineers and machines. Users should be able to click on an individual engineer or machine to see all the engineers/machines that belong to it. | True |
 
 ##### Software Requirements
 
@@ -32,9 +37,9 @@
 
 ##### Open Locally
 
-1. Click on the link to my repository on github [here](https://github.com/jeffchiudev/PROJECTNAME). 
+1. Click on the link to my repository on github [here](https://github.com/jeffchiudev/Factory.Solution). 
 2. Click on the green "Code" link near the top and above the README.md.
-3. Alternatively open your terminal and use the command `git clone https://github.com/jeffchiudev/PROJECTNAME` into the directory you would like to clone the repository.
+3. Alternatively open your terminal and use the command `git clone https://github.com/jeffchiudev/Factory.Solution` into the directory you would like to clone the repository.
 4. Open in text editor to view code.
 
 ##### Installing .NET
@@ -98,4 +103,4 @@ If any errors or bugs occur please email me [here](jeffchiudev@gmail.com).
 
 This software is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
 
-<img src="https://apprecs.org/gp/images/app-icons/300/7c/air.capoo.jpg" width="1%" height="auto" style="border-radius: 50%"> Copyright (c) 2020 Jeff Chiu 
+<img src="https://apprecs.org/gp/images/app-icons/300/7c/air.capoo.jpg" width="1%" height="auto" style="border-radius: 50%"> Copyright (c) 2021 Jeff Chiu 
