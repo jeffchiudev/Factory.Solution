@@ -1,14 +1,15 @@
-@* @{
-  Layout = "_Layout";
+@{
+    Layout = "_Layout";
 }
 
-@model ToDoList.Models.Category
+@model Factory.Models.Engineer
 
-<h4>Add a new category</h4>
+<h4>Add a new person to the Engineer roster:</h4>
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
-    <input type="submit" value="Add new category" />
+    @Html.LabelFor(model => model.EngineerName)
+    @Html.TextBoxFor(model => model.EngineerName)
+    <input type="submit" value="Add Engineer" class="btn btn-success" />
 }
-<p>@Html.ActionLink("Show all categories", "Index")</p> *@
+<p>@Html.ActionLink("Show Engineer Roster", "Index")</p>
+<p>@Html.ActionLink("Back Home", "Index", "Home")</p>

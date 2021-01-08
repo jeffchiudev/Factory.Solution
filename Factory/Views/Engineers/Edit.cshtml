@@ -1,20 +1,22 @@
-@* @{
+@{
   Layout = "_Layout";
 }
 
-@model ToDoList.Models.Category
+@model Factory.Models.Engineer
 
-<h2>Edit</h2>
-
-<h4>Edit this category: @Html.DisplayFor(model => model.Name)</h4>
+<h2>Edit Engineer Details:</h2>
+<hr/>
+<h4>Editing: @Html.DisplayFor(model => model.EngineerName)</h4>
 
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(model => model.CategoryId)
+    @Html.HiddenFor(model => model.EngineerId)
 
-    @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name)
+    @Html.LabelFor(model => model.EngineerName)
+    @Html.EditorFor(model => model.EngineerName)
 
-    <input type="submit" value="Save" />
+    <input type="submit" value="Save" class="btn btn-primary" />
 }
-<p>@Html.ActionLink("Back to categories", "Index")</p> *@
+<hr/>
+<p>@Html.ActionLink("Back to Engineer Roster", "Index")</p>
+<p>@Html.ActionLink("Back Home", "Index", "Home")</p>
