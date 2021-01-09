@@ -2,11 +2,12 @@
     Layout = "_Layout";
 }
 
-<h1>Factory Engineer/Machine Task Manager:</h1>
-<hr/>
 @using Factory.Models;
 @model List<Factory.Models.Engineer>
+@model List<Factory.Models.Machine>
 
+<h1>Factory Engineer/Machine Task Manager:</h1>
+<hr/>
 <h1>Engineer Roster</h1>
 <hr/>
 @if (@Model.Count == 0)
@@ -19,5 +20,17 @@
     <h4>@Html.ActionLink($"{engineer.EngineerName}", "Details", new { id = engineer.EngineerId })</h4>
 }
 
+<h1>Machines</h1>
+<hr/>
+@if (@Model.Count == 0)
+{
+  <h3>There are no machines on to display.</h3>
+} 
+
+@foreach (Machine machine in Model)
+{
+  <h4>@Html.ActionLink($"{machine.MachineName}", "Details", new { id = machine.MachineId })</h4>
+}
+<hr/>
 <p>@Html.ActionLink("See All Engineers", "Index", "Engineers")</p>
 <p>@Html.ActionLink("See All Machines", "Index", "Machines")</p>

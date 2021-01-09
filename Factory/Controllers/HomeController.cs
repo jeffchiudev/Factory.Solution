@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using Factory.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Factory.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Factory.Controllers
@@ -15,9 +15,10 @@ namespace Factory.Controllers
             _db = db;
         }
         //[HttpGet("/")]
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
-            List<Engineer> model = _db.Engineers.ToList();
+            Dictionary<string, object> model = new Dictionary<string, object>();
+            
             return View(model);
         }
     }
