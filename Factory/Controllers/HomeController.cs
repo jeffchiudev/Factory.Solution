@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using Factory.Models;
+using System.Dynamic;
 using Microsoft.EntityFrameworkCore;
 
 namespace Factory.Controllers
@@ -17,8 +18,9 @@ namespace Factory.Controllers
         //[HttpGet("/")]
         public ActionResult Index(int id)
         {
-            Dictionary<string, object> model = new Dictionary<string, object>();
-            
+            dynamic model = new ExpandoObject();
+            model.Engineers = _db.Engineers.ToList();
+            model.Machines = _db.Machines.ToList();
             return View(model);
         }
     }
