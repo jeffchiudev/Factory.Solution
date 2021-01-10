@@ -104,8 +104,6 @@ CREATE TABLE `machines` (
 2. Use command `dotnet build` and `dotnet run` to start a local version of the page. 
 3. Navigate to http://localhost:5000
 
-## Known Bugs
-
 ## Support and Contact Details
 
 For errors or bugs occur please email me [here](jeffchiudev@gmail.com).
