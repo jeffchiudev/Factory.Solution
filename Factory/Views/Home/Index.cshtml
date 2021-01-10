@@ -32,5 +32,5 @@
   <h4>@Html.ActionLink($"{machine.MachineName}", "Details", "Machines", new { id = machine.MachineId })</h4>
 }
 <hr/>
-<p>@Html.ActionLink("Manage Engineers", "Index", "Engineers")</p>
-<p>@Html.ActionLink("Manage Machines", "Index", "Machines")</p>
+<p>@Html.ActionLink("Manage Engineers", "Index", "Engineers", null, new {@class="btn btn-primary"})</p>
+<p>@Html.ActionLink("Manage Machines", "Index", "Machines", null, new {@class = "btn btn-success"})</p>
